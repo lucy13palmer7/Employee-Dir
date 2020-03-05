@@ -23,37 +23,37 @@ function startApp() {
     .prompt({
         name: "action",
         type: "list",
-        message: "Welcome to our employee database! What would you like to do?",
+        message: "Welcome to the Employee database. What do you want to look at?",
         choices: [
-                "View all employees",
-                "View all departments",
-                "View all roles",
-                "Add an employee",
-                "Add department",
-                "Add a role",
-                "EXIT"
+                "View all Employees",
+                "View all Departments",
+                "View all Roles",
+                "Add an Employee",
+                "Add Department",
+                "Add a Role",
+                "Leave"
         ]
     }).then(function (answer) {
         switch (answer.action) {
-            case "View all employees":
+            case "View all Employees":
                 viewEmployees();
                 break;
-            case "View all departments":
+            case "View all Departments":
                 viewDepartments();
                 break;
-            case "View all roles":
+            case "View all Roles":
                 viewRoles();
                 break;
-            case "Add an employee":
+            case "Add an Employee":
                 addEmployee();
                 break;
-            case "Add department":
+            case "Add Department":
                 addDepartment();
                 break;
-            case "Add a role":
+            case "Add a Role":
                 addRole();
                 break;
-            case "EXIT": 
+            case "Leave": 
                 endApp();
                 break;
             default:
@@ -99,7 +99,7 @@ function addEmployee() {
             {
                 name: "first_name",
                 type: "input", 
-                message: "Employee's fist name: ",
+                message: "Employee's first name: ",
             },
             {
                 name: "last_name",
@@ -116,7 +116,7 @@ function addEmployee() {
                 }
                 return roleArray;
                 },
-                message: "What is this employee's role? "
+                message: "What is this Employee's role? "
             }
             ]).then(function (answer) {
                 let roleID;
@@ -135,7 +135,7 @@ function addEmployee() {
                 },
                 function (err) {
                     if (err) throw err;
-                    console.log("Your employee has been added!");
+                    console.log("Your new Employee has been added!");
                     startApp();
                 }
                 )
@@ -149,7 +149,7 @@ function addDepartment() {
         {
             name: "new_dept", 
             type: "input", 
-            message: "What is the new department you would like to add?"
+            message: "What is the new Department you would like to add?"
         }
     ]).then(function (answer) {
         connection.query(
@@ -176,7 +176,7 @@ function addRole() {
         {
             name: "new_role",
             type: "input", 
-            message: "What is the Title of the new role?"
+            message: "What is the Title of the new Role?"
         },
         {
             name: "salary",
@@ -211,7 +211,7 @@ function addRole() {
             },
             function (err, res) {
                 if(err)throw err;
-                console.log("Your new role has been added!");
+                console.log("Your new Role has been added!");
                 startApp();
             }
         )

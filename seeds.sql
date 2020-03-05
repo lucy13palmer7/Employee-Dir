@@ -1,24 +1,43 @@
 INSERT INTO department (name)
-VALUES ("Sales"), ("Engineering"), ("Finance"), ("Legal"),('Human Resources');
+VALUES ("Accounting"), ("Engineering"),('Information Technology') ("Marketing"), ("Customer Sales Represenative"),('Human Resources'),('Warehouse Managment');
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("VP Sales", 100000, 1), /* 1 */
-         ("Salesperson", 80000, 1), /* 2 */
-         ("Lead Engineer", 150000, 2), /* 3 */
-         ("Software Engineer", 120000, 2), /* 4 */
-         ("Accountant", 125000, 3), /* 5 */
-         ("Lead Lawyer", 190000, 4), /* 6 */
-         ("Lawyer", 130000, 4); /* 7 */
-        ('VP Human Resources', 190000, 5), /* 8 */
-        ('Human Resource Generalist', 65000, 5); /* 9 */
+VALUES   ("Lead Accoutant", 73000, 1), 
+         ("Accountant", 57000, 1), 
+         ("Senior Engineer", 100000, 2), 
+         ("Junior Developer", 75000, 2),
+         ('IT Specialist',64000,3) 
+         ("Sales Specialist", 55000, 4),
+         ('Marketing Coordinator', 58000, 4),
+         ("Lead CSR", 69000, 5), 
+         ("CSR", 520000, 5);
+        ('Office Assistant', 400000, 6),
+        ('Human Resource Manager', 78000, 6),
+        ('Logistics Manager', 95000, 7),
+        ('Warehouse Manager', 82000, 7),
+        ('Warehouse Lead', 50000, 7)
+        ('Warehouseman', 41000, 7);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Iggy", "Pop", 3, null), 
-        ("Johnny", "Rotton", 1, null),
-        ("Lou", "Reed", 6, null),
-        ("Debra", "Harry", 4, null),
-        ("Henry", "Rollins", 2, null),
-        ("Jello", "Biafra", 7, null), 
-        ("Siouxsie", "Sioux", 5, null); 
-        ("Sid", "Vicious", 8, null), 
-        ("Joan", "Jett", 9, null); 
+VALUES  
+        ("Lisa", "McDaniels", 1, null),
+        ("Kelly", "Frasier", 1, null),
+        ("Joe", "Smith", 2, null),
+        ("Darius", "Acosta", 2, null),
+        ("Jerry", "Sutton", 3, null),
+        ("Natasha", "Graham", 3, null),
+        ("Alex", "Barlow", 4, null),
+        ("Louis", "Henderson", 4, null),
+        ("Tanoa", "Jefferson", 5, null), 
+        ("Nicole", "Craig", 5, null),
+        ("Alexis", "Velasquez", 5 null),
+        ("Shyann", "Bray", 5, null),
+        ("Ashley", "Hansen", 6, null),
+        ("Elizabeth", "Delacruz", 6, null),
+        ("Tania", "Black", 7, null),
+        ("Terry", "Howell",7, null),
+        ("Jose", "Domingues", 7, null),
+        ("Tyler", "Cobb", 7, null),
+        ("Mathew", "Reyes", 7, null),
+        ("Josheph", "Mcgee", 7, null),
+        ("Cody", "Holt", 7, null);
